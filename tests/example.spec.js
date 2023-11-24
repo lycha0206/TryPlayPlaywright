@@ -32,4 +32,5 @@ test("not have text", async ({ page }) => {
   await page.goto("https://playwright.dev/");
 
   await expect(page.locator("body")).not.toContainText("modern123");
+  await expect(page.locator(".hero__title")).not.toContainText("hello");
 });
